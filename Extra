@@ -1,0 +1,27 @@
+#Prints the question and prompts the user for an answer    
+    def ask_and_evaluate(self):
+        user_input = raw_input("%s" % (question))
+        if user_input == "correct_answer":
+            print True
+        else:
+            print False
+        #/When I call the ask and evaluate function using the syntax
+        #/in the instructions, I get "__main__.Question object at 0x7f2d98793850>"
+        #/in the console instead of the question.  I think that is a function,
+        #/and it should be a string of words
+
+
+#Adds questions and answers to the list of questions 
+    def add_question(self, question, correct_answer):
+        questions.append(super(Exam, self).__init__(question, correct_answer))
+        #/When I call add_question using the syntax in the instructions
+        #/I am getting an error message that says "global name
+        #/questions is not defined." I do not get this error message when 
+        #/I use the syntax 'questions = super(Exam, self).__init__(question, 
+        #/correct_answer)', but the print statement is None.  I also tried
+        #/moving line 72 to line 77, but that did not help
+
+        print questions
+        #/This is printing None.  So it seems like nothing is getting added
+        #/to the empty list of questions
+        return questions
